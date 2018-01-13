@@ -1,6 +1,6 @@
 package USACO;
 
-public class Input {
+/*public class Input {
 	int day;
     int name;
     int change;
@@ -21,4 +21,4 @@ public class Input {
     public int name(){
         return name;
     }
-}
+}*/

@@ -1,6 +1,6 @@
 package USACO;
 
-public class Cow {
+/*public class Cow {
 	int output;
     int name;
     public Cow(int name1, int output1){
@@ -19,4 +19,4 @@ public class Cow {
     public int output(){
         return output;
     }
-}
+}*/

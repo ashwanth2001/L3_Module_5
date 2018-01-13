@@ -102,7 +102,8 @@ public class Leaderboard
             maxCows2 = maxCows1;
             inp.remove(minI);
         }
-        System.out.println(amount);
+        pw.println(amount);
+		pw.close();
     }
     
     public static boolean Check(ArrayList<Integer> maxCows1, ArrayList<Integer> maxCows2)
@@ -122,5 +123,49 @@ public class Leaderboard
         }
 
         return true;
+    }
+}
+
+class Input {
+	int day;
+    int name;
+    int change;
+    public Input(int day1, int name1, int change1){
+        change = change1;
+        name = name1;
+        day = day1;
+    } 
+    
+    public int day(){
+        return day;
+    }
+    
+    public int change(){
+        return change;
+    }
+    
+    public int name(){
+        return name;
+    }
+}
+
+class Cow {
+	int output;
+    int name;
+    public Cow(int name1, int output1){
+        name = name1;
+        output = output1;
+    }
+    
+    public void add(int input){
+        output+=input;
+    }
+    
+    public int name(){
+        return name;
+    }
+    
+    public int output(){
+        return output;
     }
 }

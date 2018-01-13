@@ -12,7 +12,6 @@ public class ArrayOverload {
 			public void run() {
 				// TODO Auto-generated method stub
 				for(int i = 1000000; i>0; i--) {
-					int j = i;
 					threads[i] = new Thread(new Runnable() {
 
 						@Override
