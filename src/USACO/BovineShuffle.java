@@ -1,4 +1,4 @@
-
+package USACO;
 import java.io.*;
 import java.util.*;
 
@@ -12,32 +12,34 @@ public class BovineShuffle {
 	    int numCows = Integer.parseInt(st.nextToken());
 	       
 	    st = new StringTokenizer(br.readLine());
-	    ArrayList<Integer> fin = new ArrayList<Integer>(numCows);
-	        
+	    int[] fin = new int[numCows];
 	    for(int i = 0; i<numCows; i++) {
-	    		fin.add(Integer.parseInt(st.nextToken()));
+	    		fin[i]+=(Integer.parseInt(st.nextToken())-1);
 	    }
 	        
 	    st = new StringTokenizer(br.readLine());
-	    ArrayList<String> id = new ArrayList<String>(numCows);
-	        
+	    String[] id = new String[numCows];
 	    for(int i = 0; i<numCows; i++) {
-	    		id.add(st.nextToken());
+	    		id[i] = st.nextToken();
 	    }
 	    
-	    int savej = -1;
-	    ArrayList<String> sol = new ArrayList<String>(numCows);
-	    for(int i = 1; i<numCows+1; i++) {
-	     	for(int j = 0; j<numCows; j++) {
-	     		if(fin.get(j) == i) {
-	     			savej = j;
-	     			break;
-	     		}
-	     	}
-	        	sol.add(id.get(savej));
+	    String[] id2 = new String[numCows];
+	    for(int z = 0; z<3; z++) {
+	    		for(int i = 0; i<numCows; i++) {
+	    			for(int j = 0; j<numCows; j++) {
+	    				if(fin[j] == i) {
+	    					id2[j] = id[i];
+	    					break;
+	    				}
+	    			}
+	    		}
+	    		id = id2;
+	    		id2 = new String[numCows];
 	    }
+	    
 	    for(int k = 0; k<numCows; k++) {
-	        pw.println(sol.get(k));
+	    		pw.println(id[k]);
 	    }
-	}
+	    pw.close(); 
+	 }
 }

@@ -1,5 +1,4 @@
 package USACO;
-
 import java.io.*;
 import java.util.*;
 public class Answer2 {
