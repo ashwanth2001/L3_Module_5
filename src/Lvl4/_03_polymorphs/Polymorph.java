@@ -1,10 +1,10 @@
-package _03_polymorphs;
+package Lvl4._03_polymorphs;
 
 import java.awt.Graphics;
 
 public abstract class Polymorph {
-    int x;
-    int y;
+    protected int x;
+    protected int y;
     
     Polymorph(int x, int y){
    	 this.x = x;
